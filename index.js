@@ -7,11 +7,7 @@ const getResponse = require("./utils/getResponse");
 program.version("1.0.0").description("Netspeed Finder");
 
 program
-    .option(
-        "--unit [Bps|KBps|MBps|GBps|bps|Kbps|Mbps|Gbps]",
-        "netspeed unit",
-        "Mbps"
-    )
+    .option("--unit [Bps|KBps|MBps|GBps|bps|Kbps|Mbps|Gbps]","netspeed unit").preset("Mbps")
     .parse();
 
 const { unit } = program.opts();
